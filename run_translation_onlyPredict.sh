@@ -1,0 +1,12 @@
+python run_translation_bart_chinese.py \
+    --model_name_or_path tmp/CCL_no_frame/ \
+    --do_predict \
+    --source_lang source \
+    --target_lang target \
+    --train_file data/train_no_frame.json \
+    --test_file data/test_no_frame.json \
+    --output_dir tmp/CCL_no_frame/predict \
+    --per_device_train_batch_size=4 \
+    --per_device_eval_batch_size=4 \
+    --overwrite_output_dir \
+    --predict_with_generate
